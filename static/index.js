@@ -167,10 +167,10 @@ $(document).ready(function(){
 function displayBot() {
 
     //  quando o botão do chatbot for clicado
-    $('').click(function () {
+    $('.chatbox__button').click(function () {
 
         //  alterne (toogle) a janela de chat do chatbot
-        $('').toggle()
+        $('.chatbox__chat').toggle()
     });
 
     //Inicie a conversa com o robô
@@ -180,18 +180,18 @@ function displayBot() {
 function askBot() {
 
     //  quando o botão enviar for clicado
-    $("").click(function () {
+    $("#send_button").click(function () {
 
         //  obtenha o texto da caixa de texto no chatbot
-        var user_bot_input_text = $("").val()
+        var user_bot_input_text = $("#bot_input_text").val()
 
         if (user_bot_input_text != "") {
            
             // adicione um novo elemento div na janela de conversa
-            $("").append('<div class="user__messages">' + user_bot_input_text + ' </div>')
+            $("#chat_messages").append('<div class="user__messages">' + user_bot_input_text + ' </div>')
             
             //Limpe a caixa de entrada de texto após enviar a mensagem
-            $("").val('');
+            $("#bot_input_text").val('');
 
             let chat_input_data = {
                 "": user_bot_input_text
